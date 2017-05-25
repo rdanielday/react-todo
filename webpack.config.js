@@ -35,16 +35,16 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.jsx?$/,
         loader: 'babel-loader',
         query: {
           presets: ['react', 'es2015', 'stage-0'],
         },
-        test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
       },
       {
-        loader: 'eslint-loader',
         test: /\.jsx?$/,
+        loader: 'eslint-loader',
         exclude: /node_modules/,
       },
       {
