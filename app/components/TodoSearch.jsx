@@ -4,7 +4,7 @@ const TodoSearch = React.createClass({
   handleSearch() {
     const showCompleted = this.refs.showCompleted.checked;
     const searchText = this.refs.searchText.value;
-    
+
     this.props.onSearch(showCompleted, searchText);
   },
   render() {
