@@ -8,7 +8,7 @@ const AddTodo = require('AddTodo');
 
 describe('AddTodo', () => {
   it('should exist', () => {
-    expect(AddTodo).toExist();  
+    expect(AddTodo).toExist();
   });
 
   it('should call onSubmit if a valid todo item is entered', () => {

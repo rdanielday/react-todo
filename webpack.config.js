@@ -33,6 +33,13 @@ module.exports = {
     extensions: ['', '.js', '.jsx'],
   },
   module: {
+    preLoaders: [
+      {
+        test: /\.jsx?$/,
+        loader: 'eslint',
+        exclude: /node_modules/,
+      },
+    ],
     loaders: [
       {
         test: /\.jsx?$/,
@@ -41,11 +48,6 @@ module.exports = {
           presets: ['react', 'es2015', 'stage-0'],
         },
         exclude: /(node_modules|bower_components)/,
-      },
-      {
-        test: /\.jsx?$/,
-        loader: 'eslint-loader',
-        exclude: /node_modules/,
       },
       {
         test: /\.scss?$/,
